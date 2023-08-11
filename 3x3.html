@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="./style.css"  rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <div class="grid-container">
+                <button class="grid-item" onclick="play('homero')">Homero</button>
+                <button class="grid-item" onclick="play('chimp')" >Mono</button>
+                <button class="grid-item" onclick="play('estornudo')">Estornudo</button>
+            </div>
+            <div class="grid-container">
+                <button class="grid-item" onclick="play('samsung')">Samsung</button>
+                <button class="grid-item" onclick="play('thx')">THX</button>
+                <button class="grid-item" onclick="play('glass')">Vidrio</button>
+            </div>
+            <div class="grid-container">
+                <button class="grid-item" onclick="play('calamardo')">Calamardo</button>
+                <button class="grid-item" onclick="play('goofy')">Goofy</button>
+                <button class="grid-item" onclick="play('sierra')">Sierra</button>
+            
+            </div>
+        </div>
+    </body>
+    <script>
+        function play (nombre){
+            console.log(nombre);
+            let url = "./audios/"+nombre+".mp3";
+            console.log(url);
+            let aux = new Audio(url);
+            aux.play();
+        }
+    </script>
+</body>
+</html>

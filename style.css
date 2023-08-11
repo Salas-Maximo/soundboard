@@ -1,0 +1,53 @@
+body{
+    /*background-image: url("ocr.jpeg");*/
+    background-color: #181818;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+div{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;   
+  }
+  
+  .grid-item {
+    flex-direction: row; 
+    box-sizing: border-box;
+  }
+  button {
+    display: inline-block;
+    height: 12rem;
+    width: 12rem;
+    margin: 10px;
+    cursor: pointer;
+
+    color: lightgoldenrodyellow;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-align: center;
+    
+
+    background-color: orange;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0.5rem 0.5rem orangered;
+    text-shadow: 3px 2px rgb(18,18,18);
+  }
+  
+  button:hover {
+    background-color: darkorange;
+    
+  }
+  
+  button:active {
+    background-color: orangered;
+    color: white;
+    box-shadow: 0.5rem 0.5rem red;
+    transform: translateY(4px);
+  }
+ 
