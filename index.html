@@ -5,6 +5,10 @@
     </head>
     <body>
         <div>
+            <h1 >
+                SOUNDBOARD
+            </h1>
+
             <div class="grid-container">
                 <button class="grid-item" onclick="play('homero')">Homero</button>
                 <button class="grid-item" onclick="play('chimp')" >Mono</button>
@@ -24,7 +28,9 @@
         </div>
     </body>
     <script>
+        //var aux = new Audio("./audios/homero.mp3"); 
         function play (nombre){
+            //aux.pause();
             console.log(nombre);
             let url = "./audios/"+nombre+".mp3";
             console.log(url);

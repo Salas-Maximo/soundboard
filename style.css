@@ -3,7 +3,9 @@ body{
     background-color: #181818;
     background-repeat: no-repeat;
     background-size: 100%;
-    
+}
+:root{
+  --color-normal: orange;
 }
 div{
   display: grid;
@@ -19,35 +21,59 @@ div{
     flex-direction: row; 
     box-sizing: border-box;
   }
+  h1{
+    text-align: center;
+    color: var(--color-normal);
+    text-shadow: 5px 5px orangered;
+    font-size: 6rem;
+    font-weight: bold;
+    margin: 0px;
+    padding: none;
+    font-family:sans-serif;
+    transition: 100ms;
+    user-select: none; 
+
+  }
+  
+  h1:active{
+    color: yellow;
+    text-shadow: none;
+    transform: translate(0.5rem,0.5rem);
+    text-shadow: 0px 0px 15px orange;
+  }
+
   button {
     display: inline-block;
-    height: 12rem;
-    width: 12rem;
+    height: 10rem;
+    width: 10rem;
     margin: 10px;
     cursor: pointer;
+    transition: 150ms;
 
-    color: lightgoldenrodyellow;
-    font-size: 2rem;
+    color: whitesmoke;
+    font-size: 1.5rem;
     font-weight: bolder;
     text-align: center;
     
 
-    background-color: orange;
+    background-color: var(--color-normal);
     border: none;
     border-radius: 15px;
     box-shadow: 0.5rem 0.5rem orangered;
-    text-shadow: 3px 2px rgb(18,18,18);
+    text-shadow: 3px 2px 5px rgb(18,18,18);
   }
   
   button:hover {
-    background-color: darkorange;
-    
+    opacity: 0.8;
   }
   
   button:active {
-    background-color: orangered;
-    color: white;
-    box-shadow: 0.5rem 0.5rem red;
-    transform: translateY(4px);
+    opacity: 1;
+    filter: brightness(1.1);
+    color: rgb(255, 255, 194);
+    box-shadow: none;
+    text-shadow: 0px 0px 30px yellow;
+    transform: translate(0.5rem,0.5rem);
+    
   }
  
