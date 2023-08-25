@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         <link href="./style.css"  rel="stylesheet">
+        <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+        <title>SOUNDBOARD</title>
     </head>
     <body>
         <div>
@@ -10,31 +12,30 @@
             </h1>
 
             <div class="grid-container">
-                <button class="grid-item" onclick="play('homero')">Homero</button>
-                <button class="grid-item" onclick="play('chimp')" >Mono</button>
-                <button class="grid-item" onclick="play('estornudo')">Estornudo</button>
+                <button class="grid-item" onclick="play('homero')">HOMERO</button>
+                <button class="grid-item" onclick="play('chimp')" >MONO</button>
+                <button class="grid-item" onclick="play('estornudo')">ESTORNUDO</button>
             </div>
             <div class="grid-container">
-                <button class="grid-item" onclick="play('samsung')">Samsung</button>
+                <button class="grid-item" onclick="play('samsung')">SAMSUNG</button>
                 <button class="grid-item" onclick="play('thx')">THX</button>
-                <button class="grid-item" onclick="play('glass')">Vidrio</button>
+                <button class="grid-item" onclick="play('glass')">VIDRIO</button>
             </div>
             <div class="grid-container">
-                <button class="grid-item" onclick="play('calamardo')">Calamardo</button>
-                <button class="grid-item" onclick="play('goofy')">Goofy</button>
-                <button class="grid-item" onclick="play('sierra')">Sierra</button>
-            
+                <button class="grid-item" onclick="play('calamardo')">CALAMARDO</button>
+                <button class="grid-item" onclick="play('goofy')">GOOFY</button>
+                <button class="grid-item" onclick="play('sierra')">SIERRA</button>
             </div>
         </div>
     </body>
     <script>
-        //var aux = new Audio("./audios/homero.mp3"); 
+        var aux = new Audio("./audios/homero.mp3"); 
         function play (nombre){
-            //aux.pause();
+            aux.pause();
             console.log(nombre);
             let url = "./audios/"+nombre+".mp3";
             console.log(url);
-            let aux = new Audio(url);
+            aux = new Audio(url);
             aux.play();
         }
     </script>
