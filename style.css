@@ -6,22 +6,19 @@ body{
     transition-delay: 10s;
     transition: ease-in-out 10s;
     overflow: hidden; /* Hide scrollbars */
-
-
 }
 body:active{
   background-color: rgba(255, 166, 0, 0.864);
 }
-
 @font-face {
   font-family: 'chakra_petchmedium';
   src: url(webfontkit-20230825-163520/chakrapetch-medium.woff2) format('woff2'),
        url('webfontkit-20230825-163520/chakrapetch-medium.woff') format('woff');
 }
-
 :root{
   --color-normal: orange;
 }
+
 div{
   display: grid;
   align-items: center;
@@ -29,130 +26,184 @@ div{
 }
 .grid-container {
     display: flex;
-    flex-wrap: wrap;   
-  }
-  
-  .grid-item {
+  flex-wrap: wrap;   
+}  
+.grid-item {
     flex-direction: row; 
-  }
-  h1{
-    text-align: center;
-    color: var(--color-normal);
-    text-shadow: 0.4rem 0.4rem 1px orangered;
-    font-size: 6rem;
-    font-weight: bold;
-    margin: 0px;
-    padding: none;
-    font-family: 'chakra_petchmedium';
-    transition: ease-in-out 100ms;
-    
-    user-select: none; 
+}
 
 
-  }
-  h1:hover{
-    text-shadow: 0.4rem 0.4rem yellow,0.4rem 0.4rem 15px orangered;
-  }
+
+/*SOUNDBOARD*/
+
+h1{
+  text-align: center;
+  color: var(--color-normal);
+  text-shadow: 0.4rem 0.4rem 1px orangered;
+  font-size: 6rem;
+  font-weight: bold;
+  margin: -10px;
+  padding: none;
+  font-family: 'chakra_petchmedium';
+  transition: ease-in-out 100ms;
   
-  h1:active{
+  user-select: none; 
+}
+h1:hover{
+  text-shadow: 0.4rem 0.4rem yellow,0.4rem 0.4rem 15px orangered;
+}
+  
+h1:active{
     color: yellow;
     text-shadow: none;
     transform: translate(0.4rem,0.4rem);
     text-shadow: 0px 0px 15px orangered;
-  }
-  
-  .boton{
-    width: 9rem;
-    height: 9rem;
-    border-radius: 15px;
-    border: none;
-    margin: 1rem;
-    display: inline-block;
-    cursor: pointer;
-    user-select: none; 
-
-    background-color: var(--color-normal);
-    box-shadow: 0.4rem 0.4rem orangered;
-    transition: 250ms ;
-    transition-delay: 50ms;
-    
-    font-size: 1.2rem;
-    font-family: 'chakra_petchmedium';
-    font-weight: bolder;
-    text-align: center;
-    color: whitesmoke;
-    text-shadow: 3px 2px 1px rgb(18,18,18);
-  }
-  .boton:hover{
-    box-shadow: 0.4rem 0.4rem yellow,0.4rem 0.4rem 15px 2px orangered;
-    color: yellow;
-    text-shadow: 3px 2px 2px rgb(107, 29, 0);
-  }
-  .boton:active{
-    background-color: yellow;
-    box-shadow: 0rem 0rem 15px 5px orangered;
-    filter: brightness(1.1);
-    transform: translate(0.4rem,0.4rem);
-    opacity: 1;
-    
-    color: rgb(255, 162, 0);
-    text-shadow: 0px 0px 1px rgb(255, 162, 0);
-    font-weight: bold;
-  }
-  
-
-  #menu__toggle {
-    opacity: 0;
-  }
-  #menu__toggle:checked ~ .menu__box {
-    left: 0 !important;
-  }
-  
-  .menu__btn {
-    color: orange;
-    position: fixed;
-    text-shadow: 0.1rem 0.1rem 0px orangered;
-   
-    top:-0rem;
-    left: 1.3rem;
-    font-size: 5rem;
-    cursor: pointer;
-    z-index: 2;
-    border-radius: 5px;
-    user-select: none;
-  }
-  
-  .menu__box {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 300px;
-    height: 100%;
-    margin: 0;
-    padding: 80px 0;
-    background-color: orange;
-    box-shadow: 0.4rem 0px 0px orangered;
-    transition-duration: 500ms;
-  }
-
-  .menu__item {
-    display: block;
-    padding: 12px;
-    font-size: 2rem;
-    font-family: 'chakra_petchmedium';
-    font-weight: bolder;
-    text-align: center;
-    color: whitesmoke;
-    text-shadow: 3px 2px 1px rgb(18,18,18);
-    font-weight: 600;
-    text-decoration: none;
-    transition-duration: .25s;
-
-  }
-  .menu__item:hover {
-    color: yellow;
-    text-shadow: 3px 2px 2px rgb(107, 29, 0);
-    box-shadow: 0.4rem 0px 0px yellow, 0.7rem 0 10px -1px orangered;
   }  
 
+
+
+/*BOTONES*/
+
+.boton{
+  width: 9rem;
+  height: 9rem;
+  border-radius: 15px;
+  border: none;
+  margin: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none; 
+
+  background-color: var(--color-normal);
+  box-shadow: 0.4rem 0.4rem orangered;
+  transition: 250ms ;
+  transition-delay: 50ms;
+  
+  font-size: 1.2rem;
+  font-family: 'chakra_petchmedium';
+  font-weight: bolder;
+  text-align: center;
+  color: whitesmoke;
+  text-shadow: 3px 2px 1px rgb(18,18,18);
+}
+.boton:hover{
+  box-shadow: 0.4rem 0.4rem yellow,0.4rem 0.4rem 15px 2px orangered;
+  color: yellow;
+  text-shadow: 3px 2px 2px rgb(107, 29, 0);
+}
+.boton:active{
+  background-color: yellow;
+  box-shadow: 0rem 0rem 15px 5px orangered;
+  filter: brightness(1.1);
+  transform: translate(0.4rem,0.4rem);
+  opacity: 1;
+  
+  color: rgb(255, 162, 0);
+  text-shadow: 0px 0px 1px rgb(255, 162, 0);
+  font-weight: bold;
+}
+  
+
+
+/*MENU*/
+
+
+
+/*+*/
+
+.menu__btn {
+  color: orange;
+  position: fixed;
+  text-shadow: 0.1rem 0.1rem 0px orangered;
+  
+  top:-0rem;
+  left: 1.3rem;
+  font-size: 5rem;
+  cursor: pointer;
+  z-index: 2;
+  user-select: none;
+  transition: 250ms;
+}
+.menu__btn:hover {
+  text-shadow: 0.1rem 0.1rem 0px yellow,0.2rem 0.2rem 10px orangered;
+}
+.menu__btn:active {
+  text-shadow: 0 0 15px orangered;
+  color: yellow;
+  transform: translate(0.1rem, 0.1rem);
+}
+
+#menu__toggle:checked + .menu__btn{
+  color: white ;
+  transition: 250ms ;
+  transition-delay: 50ms;
+  color: whitesmoke;
+  text-shadow: 3px 2px 1px rgb(18,18,18);
+
+}
+
+
+#menu__toggle:checked + .menu__btn:hover{
+  text-shadow: 3px 2px 2px rgb(107, 29, 0);
+  color: yellow;
+}
+#menu__toggle:checked + .menu__btn:active{
+  color: yellow;
+  text-shadow:none;
+}
+
+
+
+/*NAVBAR*/
+
+.menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: auto;
+  border-radius: 0 0 25px 0;
+  margin: 0;
+  padding: 80px 0;
+  background-color: orange;
+  box-shadow: 0.4rem 0.4rem 0px orangered,  0rem 0.4rem 0px orangered, 0.4rem 0rem 0px orangered ;
+  transition-duration: 500ms;
+}
+.menu__item {
+  display: block;
+  padding: 12px;
+  padding-left: 18px;
+  font-size: 2rem;
+  font-family: 'chakra_petchmedium';
+  font-weight: bolder;
+  text-align: left;
+  color: whitesmoke;
+  text-shadow: 3px 2px 1px rgb(18,18,18);
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+  
+}
+.menu__item:hover {
+  color: yellow;
+  text-shadow: 3px 2px 2px rgb(107, 29, 0);
+  box-shadow: 0.4rem 0px 0px yellow, 0.7rem 0 10px -1px orangered;
+}  
+.menu__item:active {
+  color: orange;
+  background-color: yellow;
+  text-shadow: none;
+  box-shadow: 0.4rem 0px 0px yellow, 0.7rem 0 20px -1px orangered;
+}  
+
+
+
+/*TOGGLE*/
+
+#menu__toggle {
+  opacity: 0;
+}
+#menu__toggle:checked ~ .menu__box {
+  left: 0 !important;
+}
