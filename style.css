@@ -5,6 +5,8 @@ body{
     background-size: 100%;
     transition-delay: 10s;
     transition: ease-in-out 10s;
+    overflow: hidden; /* Hide scrollbars */
+
 
 }
 body:active{
@@ -56,49 +58,101 @@ div{
     color: yellow;
     text-shadow: none;
     transform: translate(0.4rem,0.4rem);
-    text-shadow: 0px 0px 15px orange;
+    text-shadow: 0px 0px 15px orangered;
   }
-
-  button {
+  
+  .boton{
+    width: 9rem;
+    height: 9rem;
+    border-radius: 15px;
+    border: none;
+    margin: 1rem;
     display: inline-block;
-    height: 10rem;
-    width: 10rem;
-    margin: 10px;
     cursor: pointer;
-    transition: 250ms ;
-    transition-delay: 50ms;
-
-    color: whitesmoke;
-    font-size: 1.2rem;
-    font-weight: bolder;
-    text-align: center;
     user-select: none; 
-    font-family: 'chakra_petchmedium';
-
-    
 
     background-color: var(--color-normal);
-    border: none;
-    border-radius: 15px;
     box-shadow: 0.4rem 0.4rem orangered;
+    transition: 250ms ;
+    transition-delay: 50ms;
+    
+    font-size: 1.2rem;
+    font-family: 'chakra_petchmedium';
+    font-weight: bolder;
+    text-align: center;
+    color: whitesmoke;
     text-shadow: 3px 2px 1px rgb(18,18,18);
   }
-  
-  button:hover {
+  .boton:hover{
     box-shadow: 0.4rem 0.4rem yellow,0.4rem 0.4rem 15px 2px orangered;
-    text-shadow: 3px 2px 2px rgb(107, 29, 0);
     color: yellow;
+    text-shadow: 3px 2px 2px rgb(107, 29, 0);
+  }
+  .boton:active{
+    background-color: yellow;
+    box-shadow: 0rem 0rem 15px 5px orangered;
+    filter: brightness(1.1);
+    transform: translate(0.4rem,0.4rem);
+    opacity: 1;
+    
+    color: rgb(255, 162, 0);
+    text-shadow: 0px 0px 1px rgb(255, 162, 0);
+    font-weight: bold;
+  }
+  
+
+  #menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  
+  .menu__btn {
+    color: orange;
+    position: fixed;
+    text-shadow: 0.1rem 0.1rem 0px orangered;
+   
+    top:-0rem;
+    left: 1.3rem;
+    font-size: 5rem;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 5px;
+    user-select: none;
+  }
+  
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    background-color: orange;
+    box-shadow: 0.4rem 0px 0px orangered;
+    transition-duration: 500ms;
+  }
+
+  .menu__item {
+    display: block;
+    padding: 12px;
+    font-size: 2rem;
+    font-family: 'chakra_petchmedium';
+    font-weight: bolder;
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 3px 2px 1px rgb(18,18,18);
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
 
   }
-  
-  button:active {
-    opacity: 1;
-    background-color: yellow;
-    filter: brightness(1.1);
-    color: rgb(255, 162, 0);
-    font-weight: bold;
-    box-shadow: 0rem 0rem 15px 5px orangered;
-    text-shadow: 0px 0px 1px rgb(255, 162, 0);
-    transform: translate(0.4rem,0.4rem);
-  }
- 
+  .menu__item:hover {
+    color: yellow;
+    text-shadow: 3px 2px 2px rgb(107, 29, 0);
+    box-shadow: 0.4rem 0px 0px yellow, 0.7rem 0 10px -1px orangered;
+  }  
+
