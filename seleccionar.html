@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="./style.css"  rel="stylesheet">
+        <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+        <title>SELECCIONAR</title>
+    </head>
+    <body>
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                +
+            </label>
+            <ul class="menu__box">
+              <li><a class="menu__item" href="index.html">SOUNDBOARD</a></li>
+              <li><a class="menu__item" href="agregar.html">Agregar</a></li>
+              <li><a class="menu__item" href="borrar.html">Borrar</a></li>
+              <li><a class="menu__item" href="actualizar.html">Actualizar</a></li>
+            </ul>
+    
+            <h1 >
+                SELECCIONAR
+            </h1>
+
+            <div class="grid-container">
+                <button class="grid-item boton seleccion" onclick="play('homero')">HOMERO</button>
+                <button class="grid-item boton seleccion" onclick="play('chimp')" >MONO</button>
+                <button class="grid-item boton seleccion" onclick="play('estornudo')">ESTORNUDO</button>
+            </div>
+            <div class="grid-container">
+                <button class="grid-item boton seleccion" onclick="play('samsung')">SAMSUNG</button>
+                <button class="grid-item boton seleccion" onclick="play('thx')">THX</button>
+                <button class="grid-item boton seleccion" onclick="play('glass')">VIDRIO</button>
+            </div>
+            <div class="grid-container">
+                <button class="grid-item boton seleccion" onclick="play('calamardo')">CALAMARDO</button>
+                <button class="grid-item boton seleccion" onclick="play('goofy')">GOOFY</button>
+                <button class="grid-item boton seleccion" onclick="play('sierra')">SIERRA</button>
+            </div>
+    </body>
+    <script>
+        var aux = new Audio("./audios/homero.mp3"); 
+        function play (nombre){
+            aux.pause();
+            console.log(nombre);
+            let url = "./audios/"+nombre+".mp3";
+            console.log(url);
+            aux = new Audio(url);
+            aux.play();
+        }
+    </script>
+</body>
+</html>

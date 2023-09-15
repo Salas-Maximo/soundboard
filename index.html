@@ -6,8 +6,17 @@
         <title>SOUNDBOARD</title>
     </head>
     <body>
-        <button href=""  class="menu">≡</button>
-        <div>
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                +
+            </label>
+            <ul class="menu__box">
+              <li><a class="menu__item" href="agregar.html">Agregar</a></li>
+              <li><a class="menu__item" href="borrar.html">Borrar</a></li>
+              <li><a class="menu__item" href="seleccionar.html">Seleccionar</a></li>
+              <li><a class="menu__item" href="actualizar.html">Actualizar</a></li>
+            </ul>
+    
             <h1 >
                 SOUNDBOARD
             </h1>
@@ -26,7 +35,7 @@
                 <button class="grid-item boton" onclick="play('goofy')">GOOFY</button>
                 <button class="grid-item boton" onclick="play('sierra')">SIERRA</button>
             </div>
-        </div>
+
     </body>
     <script>
         var aux = new Audio("./audios/homero.mp3"); 

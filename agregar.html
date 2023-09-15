@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="./style.css"  rel="stylesheet">
+        <link rel="shortcut icon" type="image/jpg" href="favicon.ico"/>
+        <title>AGREGAR</title>
+    </head>
+    <body>
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            +
+        </label>
+        <ul class="menu__box">
+            <li><a class="menu__item" href="index.html">SOUNDBOARD</a></li>
+          <li><a class="menu__item" href="borrar.html">Borrar</a></li>
+          <li><a class="menu__item" href="seleccionar.html">Seleccionar</a></li>
+          <li><a class="menu__item" href="actualizar.html">Actualizar</a></li>
+        </ul>
+        <h1 >
+            AGREGAR
+        </h1>
+
+        <br>
+        <br>
+
+        <div style="margin-top: 3rem; width: 100%;">
+
+            <label class="texto" for="fname">Nombre del audio</label><br>
+            <input class="ingresar" type="text" id="fname" name="fname"><br>
+            
+            <label class="texto" for="lname">Duración</label><br>
+            <input class="ingresar" type="text" id="lname" name="lname">
+
+            <input type="file" id="archivo" name="archivo" accept="mp3" />
+
+            
+            <button class="botoncomun boton">ACEPTAR</button>
+        </div>
+
+    </body>
+    <script>
+        var aux = new Audio("./audios/homero.mp3"); .
+        function play (nombre){
+            aux.pause();
+            console.log(nombre);
+            let url = "./audios/"+nombre+".mp3";
+            console.log(url);
+            aux = new Audio(url);
+            aux.play();
+        }
+    </script>
+</body>
+</html>
